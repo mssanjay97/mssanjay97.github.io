@@ -1,324 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanjay Mallasamudram Santhanam - Portfolio</title>
-    <style>
-        /* Reset */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sanjay Mallasamudram Santhanam - Portfolio</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background: #f4f7f8; }
+    header { text-align: center; padding: 50px 20px 20px; background: #1e1e2f; color: #fff; }
+    header h1 { font-size: 2.5em; margin-bottom: 10px; }
+    header p { font-size: 1em; color: #ddd; }
+    a { color: #1e90ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    section { padding: 50px 20px; max-width: 1200px; margin: auto; }
+    h2 { text-align: center; margin-bottom: 40px; font-size: 2em; color: #1e1e2f; }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f4f7f8;
-        }
+    .card-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .card { background: #fff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px; transition: transform 0.3s, box-shadow 0.3s; }
+    .card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+    .card h3 { margin-bottom: 10px; color: #1e1e2f; }
+    .card p, .card ul { margin-bottom: 10px; }
+    .card ul { padding-left: 20px; }
+    iframe { width: 100%; height: 200px; border: none; border-radius: 8px; }
 
-        header {
-            text-align: center;
-            padding: 50px 20px 20px;
-            background: #1e1e2f;
-            color: #fff;
-        }
+    #skills ul { display: flex; flex-wrap: wrap; list-style: none; justify-content: center; gap: 10px; }
+    #skills li { background: #1e90ff; color: #fff; padding: 8px 15px; border-radius: 20px; font-size: 0.9em; }
+    footer { text-align: center; padding: 20px; background: #1e1e2f; color: #fff; }
 
-        header h1 { font-size: 2.5em; margin-bottom: 10px; }
-        header p { font-size: 1em; color: #ddd; }
-
-        a { color: #1e90ff; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-
-        section {
-            padding: 50px 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        h2 {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 2em;
-            color: #1e1e2f;
-        }
-
-        /* Cards */
-        .card-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            padding: 20px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-
-        .card h3 {
-            margin-bottom: 10px;
-            color: #1e1e2f;
-        }
-
-        .card p, .card ul {
-            margin-bottom: 10px;
-        }
-
-        .card ul { padding-left: 20px; }
-
-        iframe {
-            width: 100%;
-            height: 200px;
-            border: none;
-            border-radius: 8px;
-        }
-
-        /* Skills list */
-        #skills ul {
-            display: flex;
-            flex-wrap: wrap;
-            list-style: none;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        #skills li {
-            background: #1e90ff;
-            color: #fff;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.9em;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #1e1e2f;
-            color: #fff;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            header h1 { font-size: 2em; }
-            h2 { font-size: 1.8em; }
-        }
-    </style>
+    @media (max-width: 768px) { header h1 { font-size: 2em; } h2 { font-size: 1.8em; } }
+</style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1>Sanjay Mallasamudram Santhanam</h1>
-        <p>Full Stack Software Engineer | MS in Computer Science, USC | Ex-Full Stack Developer @ Scry AI</p>
-        <p>Email: <a href="mailto:mssanjay97@gmail.com">mssanjay97@gmail.com</a> | 
-           GitHub: <a href="https://github.com/mssanjay97">github.com/mssanjay97</a></p>
-    </header>
+<header>
+    <h1>Sanjay Mallasamudram Santhanam</h1>
+    <p>Full Stack Software Engineer | MS in Computer Science, USC | Ex-Full Stack Developer @ Scry AI</p>
+    <p>Email: <a href="mailto:mssanjay97@gmail.com">mssanjay97@gmail.com</a> | GitHub: <a href="https://github.com/mssanjay97">github.com/mssanjay97</a></p>
+</header>
 
-    <!-- About Me -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p style="text-align:center; max-width:800px; margin:auto;">
-            A versatile Software Developer with experience in full-stack development, building scalable web applications, and creating innovative AI solutions. 
-            Skilled in Angular, React, Node.js, Python, and cloud technologies. Passionate about building user-centric and high-performance systems.
-        </p>
-    </section>
+<section id="about">
+    <h2>About Me</h2>
+    <p style="text-align:center; max-width:800px; margin:auto;">
+        Versatile Software Developer experienced in full-stack web and mobile development, building scalable AI solutions, and optimizing user-centric applications. Skilled in Angular, React, Node.js, Python, and cloud technologies.
+    </p>
+</section>
 
-    <!-- Work Experience -->
-    <section id="experience">
-        <h2>Work Experience</h2>
-        <div class="card-container">
-            <div class="card">
-                <h3>Software Engineer | Scry AI</h3>
-                <p>Jul 2021 - Mar 2024 | San Jose, CA</p>
-                <ul>
-                    <li>Developed full-stack applications using Angular, Node.js, and Python.</li>
-                    <li>Optimized component efficiency and automated systems, reducing development time significantly.</li>
-                    <li>Worked on AI-driven features and data pipelines to enhance user experience.</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <h3>Grader | USC</h3>
-                <p>May 2020 - Dec 2020</p>
-                <ul>
-                    <li>Graded assignments and exams for Database Systems (CSCI 585).</li>
-                    <li>Assisted with coursework management and student guidance.</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <h3>Software Engineering Co-op | Elite Software Solutions</h3>
-                <p>Jan 2019 - Jul 2019 | Chennai, India</p>
-                <ul>
-                    <li>Developed web applications and improved backend functionality.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="card-container">
-
-            <div class="card">
-                <h3>Movie Database Website</h3>
-                <p>Technologies: HTML, CSS, JavaScript, Flask, Ajax, Azure</p>
-                <ul>
-                    <li>Developed a website that searches TMDB database and displays results on interactive cards.</li>
-                    <li>Created a Flask API backend to act as a proxy between frontend and TMDB database.</li>
-                </ul>
-                <iframe src="https://www.youtube.com/embed/2bmwGdVzMsk" title="Movie Database Demo"></iframe>
-            </div>
-
-            <div class="card">
-                <h3>TMDB Android App</h3>
-                <p>Technologies: Android, Node.js, Express.js, AWS</p>
-                <ul>
-                    <li>Developed an app to recommend movies and TV shows with autocomplete search.</li>
-                    <li>Implemented shared preferences to save user watchlists and a Node.js backend API.</li>
-                </ul>
-                <iframe src="https://www.youtube.com/embed/SNNUnXX1v0c" title="TMDB Android App Demo"></iframe>
-            </div>
-
-            <div class="card">
-                <h3>Virtual Reality Assessment for Parkinson's</h3>
-                <p>Technologies: Unity, C#, HTC Vive Pro Eye</p>
-                <ul>
-                    <li>Created a VR-based game to assess visuospatial function and oculomotor control.</li>
-                    <li>Collected performance and gaze data for clinical analysis.</li>
-                </ul>
-                <iframe src="https://www.youtube.com/embed/L5JbHGAU9o0" title="VR Assessment Demo"></iframe>
-            </div>
-
-            <div class="card">
-                <h3>SETI Signal Classification</h3>
-                <p>Technologies: Deep Learning, VGG16, VGG19, InceptionNet</p>
-                <ul>
-                    <li>Classified spectrogram images to detect signs of extraterrestrial life.</li>
-                    <li>Proposed improved InceptionNet model with 84% accuracy.</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <h3>Neural Machine Translation (German-English)</h3>
-                <p>Technologies: Python, Encoder-Decoder Model</p>
-                <ul>
-                    <li>Developed a neural translation system with NIST score 1.85.</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <h3>Search Recommender</h3>
-                <p>Technologies: Keras, LSTM</p>
-                <ul>
-                    <li>Predicts the word user is typing using LSTM neural network.</li>
-                </ul>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Publications -->
-<section id="publications">
-    <h2>Publications</h2>
+<section id="experience">
+    <h2>Work Experience</h2>
     <div class="card-container">
-
         <div class="card">
-            <h3>Development of a Virtual Reality Assessment of Visuospatial Function and Oculomotor Control</h3>
-            <p>2021 IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops (VRW)</p>
+            <h3>Software Engineer | Scry AI</h3>
+            <p>Jul 2021 - Mar 2024 | San Jose, CA</p>
             <ul>
-                <li>Created a single-player 3D VR game with Unity 3D to assess Parkinson's Disease patients.</li>
-                <li>Captured eye and head data (pupil position, diameter, gaze direction, eye openness, head position/rotation) and analyzed using heatmaps.</li>
-                <li>Demo walkthrough: 
-                    <a href="https://www.youtube.com/watch?v=L5JbHGAU9o0" target="_blank">YouTube</a>, 
-                    <a href="https://rutube.ru/video/8cb4612df59c52173f22889a70ca489b/" target="_blank">RuTube</a>
-                </li>
-            </ul>
-            <iframe src="https://www.youtube.com/embed/L5JbHGAU9o0" title="VR Assessment Demo"></iframe>
-        </div>
-
-        <div class="card">
-            <h3>Routing Algorithm for Fastest Path – A Queuing</h3>
-            <p>International Journal of Engineering and Technology (UAE), Special Issue Volume 7, Issue 4, 2018</p>
-            <ul>
-                <li>Dijkstra’s Algorithm combined with single-server queuing (M/M/1) to find the fastest route between nodes.</li>
-                <li>Considered waiting time, number of packets, and queue probabilities along with link weights for optimal routing.</li>
+                <li>Developed full-stack applications with Angular, Node.js, and Python.</li>
+                <li>Optimized components and automated pipelines to reduce development time.</li>
+                <li>Built AI-driven features and real-time data pipelines for improved UX.</li>
             </ul>
         </div>
-
         <div class="card">
-            <h3>A Novel Optimal Routing Algorithm Protocol with Implementation of M/M/1 Queuing Model</h3>
-            <p>International Journal of Civil Engineering and Technology (IJCIET), Volume 8, Issue 11, November 2017</p>
+            <h3>Grader | USC</h3>
+            <p>May 2020 - Dec 2020</p>
             <ul>
-                <li>Proposed optimal routing protocol combining shortest path and packet waiting time.</li>
-                <li>Used BFS to identify all paths from source to destination and calculated total cost and waiting time for each path.</li>
-                <li>Ensured dynamic selection of best path in case of congestion or link failure.</li>
+                <li>Graded assignments and exams for Database Systems (CSCI 585).</li>
+                <li>Assisted students and managed coursework effectively.</li>
             </ul>
         </div>
-
+        <div class="card">
+            <h3>Software Engineering Co-op | Elite Software Solutions</h3>
+            <p>Jan 2019 - Jul 2019 | Chennai, India</p>
+            <ul>
+                <li>Developed web applications and enhanced backend functionality.</li>
+            </ul>
+        </div>
     </div>
 </section>
 
-
-    <!-- Skills -->
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Python</li>
-            <li>C/C++/C#</li>
-            <li>Java/JavaScript/TypeScript</li>
-            <li>HTML5 & CSS3</li>
-            <li>Angular, React, Node.js, Flask</li>
-            <li>MongoDB, MySQL, PostgreSQL, Cassandra</li>
-            <li>AI/ML: TensorFlow, PyTorch, Keras</li>
-            <li>AWS, Azure, Docker, Kubernetes</li>
-        </ul>
-    </section>
-
-    <!-- Education -->
-    <section id="education">
-        <h2>Education</h2>
-        <div class="card-container">
-            <div class="card">
-                <h3>Master's in Business Administration</h3>
-                <p>Westcliff University | 2025-present | GPA: 4.0/4.0</p>
-            </div>
-            <div class="card">
-                <h3>Master's in Computer Science</h3>
-                <p>University of Southern California | 2019-2021 | GPA: 3.91/4.0</p>
-            </div>
-            <div class="card">
-                <h3>Bachelor's in Computer Science</h3>
-                <p>Vellore Institute of Technology | 2015-2019 | Grade: 9.62/10</p>
-            </div>
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="card-container">
+        <div class="card">
+            <h3>Movie Database Website</h3>
+            <p>HTML, CSS, JS, Flask, Ajax, Azure</p>
+            <ul>
+                <li>Searches TMDB database and displays results on interactive cards.</li>
+                <li>Flask API backend acting as proxy between frontend and TMDB.</li>
+            </ul>
+            <iframe src="https://www.youtube.com/embed/2bmwGdVzMsk" title="Movie Database Demo"></iframe>
         </div>
-    </section>
+        <div class="card">
+            <h3>TMDB Android App</h3>
+            <p>Android, Node.js, Express.js, AWS</p>
+            <ul>
+                <li>Recommends movies/TV shows with autocomplete search.</li>
+                <li>Saved watchlists using Shared Preferences; Node.js backend API.</li>
+            </ul>
+            <iframe src="https://www.youtube.com/embed/SNNUnXX1v0c" title="TMDB Android Demo"></iframe>
+        </div>
+        <div class="card">
+            <h3>VR Assessment for Parkinson's</h3>
+            <p>Unity, C#, HTC Vive Pro Eye</p>
+            <ul>
+                <li>Created VR game assessing visuospatial function and oculomotor control.</li>
+                <li>Collected gaze and head data for clinical analysis.</li>
+            </ul>
+            <iframe src="https://www.youtube.com/embed/L5JbHGAU9o0" title="VR Assessment Demo"></iframe>
+        </div>
+        <div class="card">
+            <h3>SETI Signal Classification</h3>
+            <p>Deep Learning, VGG16/19, InceptionNet</p>
+            <ul>
+                <li>Classified spectrogram images to detect potential extraterrestrial signals.</li>
+                <li>Proposed improved InceptionNet model with 84% accuracy.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Neural Machine Translation (German-English)</h3>
+            <p>Python, Encoder-Decoder Model</p>
+            <ul><li>Developed a neural translation system achieving NIST score 1.85.</li></ul>
+        </div>
+        <div class="card">
+            <h3>Search Recommender</h3>
+            <p>Keras, LSTM</p>
+            <ul><li>Predicts user typing using LSTM neural network for autocomplete.</li></ul>
+        </div>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Sanjay Mallasamudram Santhanam | <a href="mailto:mssanjay97@gmail.com">mssanjay97@gmail.com</a></p>
-    </footer>
+<section id="publications">
+    <h2>Publications</h2>
+    <div class="card-container">
+        <div class="card">
+            <h3>Development of VR Assessment of Visuospatial Function and Oculomotor Control</h3>
+            <p>IEEE VRW, 2021</p>
+            <ul>
+                <li>3D VR game for Parkinson's assessment using Unity 3D.</li>
+                <li>Captured gaze and head metrics, analyzed via heatmaps.</li>
+                <li>Demo: <a href="https://www.youtube.com/watch?v=L5JbHGAU9o0" target="_blank">YouTube</a>, <a href="https://rutube.ru/video/8cb4612df59c52173f22889a70ca489b/" target="_blank">RuTube</a></li>
+            </ul>
+            <iframe src="https://www.youtube.com/embed/L5JbHGAU9o0" title="VR Demo"></iframe>
+        </div>
+        <div class="card">
+            <h3>Routing Algorithm for Fastest Path – A Queuing</h3>
+            <p>Int. J. of Eng. and Tech., UAE, 2018</p>
+            <ul>
+                <li>Dijkstra with M/M/1 queuing to find fastest route between nodes.</li>
+                <li>Optimized considering wait times, packet count, and queue probabilities.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Optimal Routing Protocol with M/M/1 Queuing</h3>
+            <p>IJCIET, 2017</p>
+            <ul>
+                <li>Combined shortest path and packet wait time for optimal routing.</li>
+                <li>BFS used to find all paths; dynamically selected best path under congestion.</li>
+            </ul>
+        </div>
+    </div>
+</section>
 
-    <!-- JS for smooth scrolling -->
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+<section id="skills">
+    <h2>Skills</h2>
+    <ul>
+        <li>Python</li>
+        <li>C/C++/C#</li>
+        <li>Java/JavaScript/TypeScript</li>
+        <li>HTML5 & CSS3</li>
+        <li>Angular, React, Node.js, Flask</li>
+        <li>MongoDB, MySQL, PostgreSQL, Cassandra</li>
+        <li>AI/ML: TensorFlow, PyTorch, Keras</li>
+        <li>AWS, Azure, Docker, Kubernetes</li>
+    </ul>
+</section>
+
+<section id="education">
+    <h2>Education</h2>
+    <div class="card-container">
+        <div class="card"><h3>MBA</h3><p>Westcliff University | 2025-present | GPA: 4.0/4.0</p></div>
+        <div class="card"><h3>MS Computer Science</h3><p>USC | 2019-2021 | GPA: 3.91/4.0</p></div>
+        <div class="card"><h3>Bachelor's Computer Science</h3><p>VIT | 2015-2019 | Grade: 9.62/10</p></div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Sanjay Mallasamudram Santhanam | <a href="mailto:mssanjay97@gmail.com">mssanjay97@gmail.com</a></p>
+</footer>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+    });
+});
+</script>
 
 </body>
 </html>
-
