@@ -1,203 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sanjay Mallasamudram Santhanam - Portfolio</title>
-<style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background: #f4f7f8; }
-    header { text-align: center; padding: 50px 20px 20px; background: #1e1e2f; color: #fff; }
-    header h1 { font-size: 2.5em; margin-bottom: 10px; }
-    header p { font-size: 1em; color: #ddd; }
-    a { color: #1e90ff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    section { padding: 50px 20px; max-width: 1200px; margin: auto; }
-    h2 { text-align: center; margin-bottom: 40px; font-size: 2em; color: #1e1e2f; }
-
-    .card-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-    .card { background: #fff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px; transition: transform 0.3s, box-shadow 0.3s; }
-    .card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
-    .card h3 { margin-bottom: 10px; color: #1e1e2f; }
-    .card p, .card ul { margin-bottom: 10px; }
-    .card ul { padding-left: 20px; }
-    iframe { width: 100%; height: 200px; border: none; border-radius: 8px; }
-
-    #skills ul { display: flex; flex-wrap: wrap; list-style: none; justify-content: center; gap: 10px; }
-    #skills li { background: #1e90ff; color: #fff; padding: 8px 15px; border-radius: 20px; font-size: 0.9em; }
-    footer { text-align: center; padding: 20px; background: #1e1e2f; color: #fff; }
-
-    @media (max-width: 768px) { header h1 { font-size: 2em; } h2 { font-size: 1.8em; } }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanjay Mallasamudram Santhanam | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+      color: #212529;
+      scroll-behavior: smooth;
+    }
+    nav {
+      background: #0d6efd;
+    }
+    nav a {
+      color: white !important;
+      font-weight: 500;
+    }
+    section {
+      padding: 80px 0;
+    }
+    h2 {
+      font-weight: 600;
+      margin-bottom: 40px;
+      text-align: center;
+      color: #0d6efd;
+    }
+    .card {
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .skills-section {
+      background: linear-gradient(135deg, #0d6efd, #6610f2);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .skills-section h2 {
+      color: white;
+    }
+    .skill-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 50px;
+      margin: 8px;
+      font-size: 15px;
+      transition: all 0.3s;
+    }
+    .skill-badge:hover {
+      background: white;
+      color: #0d6efd;
+    }
+    footer {
+      background: #0d6efd;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    iframe {
+      width: 100%;
+      height: 315px;
+      border-radius: 10px;
+    }
+  </style>
 </head>
+
 <body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Sanjay Mallasamudram Santhanam</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-<header>
-    <h1>Sanjay Mallasamudram Santhanam</h1>
-    <p>Full Stack Software Engineer | MS in Computer Science, USC | Ex-Full Stack Developer @ Scry AI</p>
-    <p>Email: <a href="mailto:mssanjay97@gmail.com">mssanjay97@gmail.com</a> | GitHub: <a href="https://github.com/mssanjay97">github.com/mssanjay97</a></p>
-</header>
+  <!-- About -->
+  <section id="about" class="container mt-5 pt-5">
+    <div class="text-center">
+      <h2>About Me</h2>
+      <p class="lead">I’m a passionate Software Engineer experienced in building scalable full-stack and AI-driven applications. With an MS in Computer Science from USC and a strong foundation in backend systems, frontend development, and data engineering, I aim to create technology that delivers meaningful user experiences.</p>
+    </div>
+  </section>
 
-<section id="about">
-    <h2>About Me</h2>
-    <p style="text-align:center; max-width:800px; margin:auto;">
-        Versatile Software Developer experienced in full-stack web and mobile development, building scalable AI solutions, and optimizing user-centric applications. Skilled in Angular, React, Node.js, Python, and cloud technologies.
-    </p>
-</section>
-
-   <section id="experience">
+  <!-- Work Experience -->
+  <section id="experience" class="container">
     <h2>Work Experience</h2>
-    <div class="card-container">
-        <div class="card">
-            <h3>Software Engineer | Scry AI</h3>
-            <p>Jul 2021 - Mar 2024 | San Jose, CA | Full-time | Hybrid</p>
-            <ul>
-                <li>Developed full-stack applications using Node.js, Express.js, Angular, and Python.</li>
-                <li>Worked with MongoDB, HTML5, CSS3, Bootstrap, and Git to maintain and optimize applications.</li>
-                <li>Implemented algorithms and AI-driven features to enhance user experience and product functionality.</li>
-            </ul>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card p-4">
+          <h4>Software Engineer | Scry AI</h4>
+          <p class="text-muted">Jul 2021 - Mar 2024 | San Jose, CA | Hybrid</p>
+          <ul>
+            <li>Developed scalable full-stack applications using Node.js, Express.js, Angular, and Python.</li>
+            <li>Integrated AI-based solutions for document parsing and automation workflows.</li>
+            <li>Worked with MongoDB, Docker, HTML5, and Bootstrap to improve platform performance.</li>
+          </ul>
         </div>
-
-        <div class="card">
-            <h3>Research Analyst and Developer | Teknuance Info Solutions Pvt Ltd</h3>
-            <p>May 2018 - Jun 2018 | Chennai, India | Internship</p>
-            <ul>
-                <li>Worked on object-oriented programming and Python-based algorithms for data analytics.</li>
-                <li>Analyzed datasets to extract actionable insights for business and research applications.</li>
-            </ul>
+      </div>
+      <div class="col-md-6">
+        <div class="card p-4">
+          <h4>Software Engineering Co-op | Elite Software Solutions</h4>
+          <p class="text-muted">Jan 2019 - Jul 2019 | Chennai, India</p>
+          <ul>
+            <li>Built and maintained web applications with PHP, MySQL, HTML, CSS, and JavaScript.</li>
+            <li>Enhanced UI responsiveness and contributed to backend feature development.</li>
+          </ul>
         </div>
-
-        <div class="card">
-            <h3>Web Development Intern | Elite Software Solutions</h3>
-            <p>Jun 2017 - Jul 2017 | Chennai, India | Internship</p>
-            <ul>
-                <li>Built front-end components using HTML5, CSS3, Bootstrap, and JavaScript.</li>
-                <li>Worked with MySQL and PHP to support backend functionality.</li>
-            </ul>
+      </div>
+      <div class="col-md-6">
+        <div class="card p-4">
+          <h4>Research Analyst & Developer | Teknuance Info Solutions</h4>
+          <p class="text-muted">May 2018 - Jun 2018 | Chennai, India</p>
+          <ul>
+            <li>Worked with Python and data analytics for research and algorithm optimization.</li>
+            <li>Analyzed datasets and implemented predictive modeling strategies.</li>
+          </ul>
         </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card p-4">
+          <h4>Web Development Intern | Elite Software Solutions</h4>
+          <p class="text-muted">Jun 2017 - Jul 2017 | Chennai, India</p>
+          <ul>
+            <li>Developed responsive web components using HTML5, CSS3, Bootstrap, and JavaScript.</li>
+            <li>Collaborated on backend integration with PHP and MySQL.</li>
+          </ul>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-
-<section id="projects">
+  <!-- Projects -->
+  <section id="projects" class="container">
     <h2>Projects</h2>
-    <div class="card-container">
-        <div class="card">
-            <h3>Movie Database Website</h3>
-            <p>HTML, CSS, JS, Flask, Ajax, Azure</p>
-            <ul>
-                <li>Searches TMDB database and displays results on interactive cards.</li>
-                <li>Flask API backend acting as proxy between frontend and TMDB.</li>
-            </ul>
-            <iframe src="https://www.youtube.com/embed/2bmwGdVzMsk" title="Movie Database Demo"></iframe>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card p-4">
+          <h4>Real-time User Activity Data Pipeline</h4>
+          <p><strong>Tech:</strong> Airflow, Python, Kafka, Spark, PostgreSQL, Cassandra, Docker</p>
+          <ul>
+            <li>Developed an ETL pipeline to process real-time user event data such as clicks and browsing sessions.</li>
+            <li>Enabled data-driven personalization and analytics dashboards.</li>
+          </ul>
         </div>
-        <div class="card">
-            <h3>TMDB Android App</h3>
-            <p>Android, Node.js, Express.js, AWS</p>
-            <ul>
-                <li>Recommends movies/TV shows with autocomplete search.</li>
-                <li>Saved watchlists using Shared Preferences; Node.js backend API.</li>
-            </ul>
-            <iframe src="https://www.youtube.com/embed/SNNUnXX1v0c" title="TMDB Android Demo"></iframe>
+      </div>
+      <div class="col-md-6">
+        <div class="card p-4">
+          <h4>AI-based Document Parser</h4>
+          <p><strong>Tech:</strong> Python, NLP, FastAPI, React</p>
+          <ul>
+            <li>Built a document parsing tool for extracting structured data from resumes and invoices.</li>
+            <li>Used named entity recognition and rule-based extraction with interactive React UI.</li>
+          </ul>
         </div>
-        <div class="card">
-            <h3>VR Assessment for Parkinson's</h3>
-            <p>Unity, C#, HTC Vive Pro Eye</p>
-            <ul>
-                <li>Created VR game assessing visuospatial function and oculomotor control.</li>
-                <li>Collected gaze and head data for clinical analysis.</li>
-            </ul>
-            <iframe src="https://www.youtube.com/embed/L5JbHGAU9o0" title="VR Assessment Demo"></iframe>
-        </div>
-        <div class="card">
-            <h3>SETI Signal Classification</h3>
-            <p>Deep Learning, VGG16/19, InceptionNet</p>
-            <ul>
-                <li>Classified spectrogram images to detect potential extraterrestrial signals.</li>
-                <li>Proposed improved InceptionNet model with 84% accuracy.</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h3>Neural Machine Translation (German-English)</h3>
-            <p>Python, Encoder-Decoder Model</p>
-            <ul><li>Developed a neural translation system achieving NIST score 1.85.</li></ul>
-        </div>
-        <div class="card">
-            <h3>Search Recommender</h3>
-            <p>Keras, LSTM</p>
-            <ul><li>Predicts user typing using LSTM neural network for autocomplete.</li></ul>
-        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<section id="publications">
+  <!-- Publications -->
+  <section id="publications" class="container">
     <h2>Publications</h2>
-    <div class="card-container">
-        <div class="card">
-            <h3>Development of VR Assessment of Visuospatial Function and Oculomotor Control</h3>
-            <p>IEEE VRW, 2021</p>
-            <ul>
-                <li>3D VR game for Parkinson's assessment using Unity 3D.</li>
-                <li>Captured gaze and head metrics, analyzed via heatmaps.</li>
-                <li>Demo: <a href="https://www.youtube.com/watch?v=L5JbHGAU9o0" target="_blank">YouTube</a>, <a href="https://rutube.ru/video/8cb4612df59c52173f22889a70ca489b/" target="_blank">RuTube</a></li>
-            </ul>
-            <iframe src="https://www.youtube.com/embed/L5JbHGAU9o0" title="VR Demo"></iframe>
-        </div>
-        <div class="card">
-            <h3>Routing Algorithm for Fastest Path – A Queuing</h3>
-            <p>Int. J. of Eng. and Tech., UAE, 2018</p>
-            <ul>
-                <li>Dijkstra with M/M/1 queuing to find fastest route between nodes.</li>
-                <li>Optimized considering wait times, packet count, and queue probabilities.</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h3>Optimal Routing Protocol with M/M/1 Queuing</h3>
-            <p>IJCIET, 2017</p>
-            <ul>
-                <li>Combined shortest path and packet wait time for optimal routing.</li>
-                <li>BFS used to find all paths; dynamically selected best path under congestion.</li>
-            </ul>
-        </div>
+    <div class="card p-4 mb-4">
+      <h4>Development of a Virtual Reality Assessment of Visuospatial Function and Oculomotor Control</h4>
+      <p class="text-muted">IEEE Conference on Virtual Reality and 3D User Interfaces, 2021</p>
+      <ul>
+        <li>Created a VR game using Unity3D to assess visuospatial functions in Parkinson’s patients.</li>
+        <li>Collected gaze and head tracking data; analyzed movement patterns using heatmaps.</li>
+      </ul>
+      <iframe src="https://www.youtube.com/embed/L5JbHGAU9o0" allowfullscreen></iframe>
     </div>
-</section>
 
-<section id="skills">
-    <h2>Skills</h2>
-    <ul>
-        <li>Python</li>
-        <li>C/C++/C#</li>
-        <li>Java/JavaScript/TypeScript</li>
-        <li>HTML5 & CSS3</li>
-        <li>Angular, React, Node.js, Flask</li>
-        <li>MongoDB, MySQL, PostgreSQL, Cassandra</li>
-        <li>AI/ML: TensorFlow, PyTorch, Keras</li>
-        <li>AWS, Azure, Docker, Kubernetes</li>
-    </ul>
-</section>
-
-<section id="education">
-    <h2>Education</h2>
-    <div class="card-container">
-        <div class="card"><h3>MBA</h3><p>Westcliff University | 2025-present | GPA: 4.0/4.0</p></div>
-        <div class="card"><h3>MS Computer Science</h3><p>USC | 2019-2021 | GPA: 3.91/4.0</p></div>
-        <div class="card"><h3>Bachelor's Computer Science</h3><p>VIT | 2015-2019 | Grade: 9.62/10</p></div>
+    <div class="card p-4 mb-4">
+      <h4>Routing Algorithm for Fastest Path – A Queuing</h4>
+      <p class="text-muted">International Journal of Engineering and Technology (UAE), 2018</p>
+      <ul>
+        <li>Combined Dijkstra’s Algorithm with M/M/1 queuing models to determine optimal paths.</li>
+      </ul>
     </div>
-</section>
 
-<footer>
-    <p>&copy; 2025 Sanjay Mallasamudram Santhanam | <a href="mailto:mssanjay97@gmail.com">mssanjay97@gmail.com</a></p>
-</footer>
+    <div class="card p-4">
+      <h4>A Novel Optimal Routing Algorithm Protocol with Implementation of M/M/1 Queuing Model</h4>
+      <p class="text-muted">International Journal of Civil Engineering and Technology (IJCIET), 2017</p>
+      <ul>
+        <li>Developed an optimal routing protocol using BFS and queuing theory to minimize latency.</li>
+      </ul>
+    </div>
+  </section>
 
-<script>
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-    });
-});
-</script>
+  <!-- Skills -->
+  <section id="skills" class="skills-section">
+    <h2>Highlighted Skills</h2>
+    <div>
+      <span class="skill-badge">Python</span>
+      <span class="skill-badge">JavaScript</span>
+      <span class="skill-badge">Node.js</span>
+      <span class="skill-badge">React</span>
+      <span class="skill-badge">Angular</span>
+      <span class="skill-badge">Express.js</span>
+      <span class="skill-badge">MongoDB</span>
+      <span class="skill-badge">SQL</span>
+      <span class="skill-badge">Docker</span>
+      <span class="skill-badge">Airflow</span>
+      <span class="skill-badge">Kafka</span>
+      <span class="skill-badge">Spark</span>
+      <span class="skill-badge">Bootstrap</span>
+      <span class="skill-badge">HTML5</span>
+      <span class="skill-badge">CSS3</span>
+      <span class="skill-badge">Git</span>
+      <span class="skill-badge">AI/ML Integration</span>
+      <span class="skill-badge">Data Engineering</span>
+    </div>
+  </section>
 
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Sanjay Mallasamudram Santhanam | <a href="https://github.com/mssanjay97" class="text-white text-decoration-underline" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/mssanjay97" class="text-white text-decoration-underline" target="_blank">LinkedIn</a></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
