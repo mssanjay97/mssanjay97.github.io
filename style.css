@@ -1,0 +1,198 @@
+/* Main styles for Sanjay's portfolio (dark, clean, reference-style) */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* { box-sizing: border-box; }
+html,body { height:100%; margin:0; font-family:'Poppins',sans-serif; scroll-behavior:smooth; }
+
+/* NAV */
+.nav-bg { background: linear-gradient(90deg,#0d6efd,#6610f2); }
+.navbar .navbar-brand { color:#fff; font-weight:700; }
+.navbar .nav-link { color: rgba(255,255,255,0.9); margin-right: .5rem; }
+.navbar .nav-link:hover { color:#ffe082; }
+
+/* HERO */
+.hero {
+  height: 82vh;
+  min-height:420px;
+  display:flex;
+  align-items:center;
+  background: linear-gradient(135deg,#0b0c10 0%,#1b2631 100%);
+  color: #fff;
+  padding-top: 80px;
+}
+.hero-inner { width:100%; }
+.hero-text { text-align:center; }
+.hero-text h1 { font-size:2rem; margin-bottom:.4rem; font-weight:700; color:#e6eef8; }
+.hero-text .accent { color:#66fcf1; }
+.hero-text p.lead { color:#d6dbe2; margin-bottom:10px; }
+.hero-cta .btn-primary { background:#66fcf1; border: none; color:#0b0c10; }
+.hero-cta .btn-outline-light { border-color: rgba(255,255,255,0.12); color:#fff; }
+
+/* SECTION */
+.section { padding: 60px 18px; }
+.section .section-title { font-size:1.4rem; text-align:center; margin-bottom:12px; color:#c73333; }
+.section .section-sub { text-align:center; color:#c73333; max-width:900px; margin:0 auto 22px; line-height:1.45; }
+
+/* dark section background */
+.section-dark { background: #0f1720; color: #d1d7df; }
+
+/* CARDS (used for experience/projects/publications) */
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.03);
+  color: #09a583;
+  transition: transform .28s ease, box-shadow .28s ease;
+}
+.card:hover { transform: translateY(-6px); box-shadow: 0 10px 30px rgba(0,0,0,0.55); }
+.card h4 { margin-top: 0; color:#199119; }
+.card .muted { color:#4588e6; font-size: .95rem; }
+
+/* video wrapper */
+.video-wrap { margin-top:12px; border-radius:10px; overflow:hidden; }
+
+/* Project links */
+.project-links .btn { margin-right:8px; }
+
+/* Projects grid */
+.project-card { padding: 18px; }
+
+/* publications simple style */
+.card ul { margin-top:10px; padding-left:1.1rem; }
+
+/* SKILLS logos grid */
+.skills-logos {
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(110px,1fr));
+  gap:18px;
+  align-items:center;
+  justify-items:center;
+  margin-top:20px;
+}
+.skill-logo {
+  width:110px; height:110px;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border:1px solid rgba(255,255,255,0.03);
+  border-radius:12px;
+  padding:12px;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.skill-logo img { max-width:64px; max-height:64px; display:block; }
+.skill-logo .skill-label { margin-top:6px; color:#dbe8ef; font-size:.9rem; text-align:center; }
+.skill-logo:hover { transform: translateY(-6px); box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
+
+/* EDUCATION cards */
+.edu-container { display:flex; flex-wrap:wrap; gap:16px; justify-content:center; margin-top:18px; }
+.edu-card { width:280px; padding:16px; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:10px; border:1px solid rgba(255,255,255,0.03); }
+
+/* CONTACT */
+.contact-links a.btn { margin: 8px 6px; }
+
+/* Footer */
+.footer { padding:20px 0; background:#0b1220; color:#9fb0c8; }
+
+/* RESPONSIVE tweaks */
+@media (max-width: 768px) {
+  .hero-text h1 { font-size:1.5rem; }
+  .navbar { padding: .5rem 1rem; }
+  .hero { padding-top: 100px; }
+}
+
+body {
+  color: #1a1a1a;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #0d0d0d;
+}
+
+p {
+  color: #222222;
+}
+
+a {
+  color: #0b57d0;
+}
+
+a:hover {
+  color: #063a8c;
+}
+
+.card h3, 
+.card p, 
+.timeline-item h3, 
+.timeline-item span, 
+.edu-card h3, 
+.edu-card span, 
+.skill-item p, 
+.contact-links a {
+  color: #111111;
+}
+
+footer {
+  color: #222222;
+}
+
+
+/* ====== Skills Section ====== */
+#skills {
+  text-align: center;
+  padding: 100px 0;
+  background: var(--bg-color);
+}
+
+#skills .section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #0d0d0d;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.skill-box {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-box img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.skill-box p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #222;
+  margin: 0;
+}
+
+.skill-box:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.skill-box:hover img {
+  transform: rotate(10deg);
+}
